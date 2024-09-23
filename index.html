@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tea House</title>
+    <!-- daisy ui and tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "first-gradient": "#da373d",
+              "second-gradient": "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .font-manrope {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-manrope bg-white">
+    <header>
+      <!-- navbar -->
+      <nav>
+        <div
+          class="navbar bg-gradient-to-r from-first-gradient to-second-gradient text-white"
+        >
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-gradient-to-r from-first-gradient to-second-gradient text-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Home</a></li>
+                <li><a>Items</a></li>
+                <li><a>Review</a></li>
+                <li><a>News</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-xl">Tea House</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>Items</a></li>
+              <li><a>Review</a></li>
+              <li><a>News</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end hidden lg:flex">
+            <div class="flex justify-center items-center">
+              <input
+                class="rounded-full px-4 py-2 bg-white text-black"
+                type="text"
+                name="search"
+                id=""
+                placeholder="Search"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="black"
+                class="size-6 inline -ml-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <section class="container mx-auto">
+        <div class="hero">
+          <div class="hero-content flex-col lg:flex-row gap-5">
+            <div class="text-black">
+              <h1 class="text-5xl font-bold">
+                It's good tea time at The Tea House
+              </h1>
+              <p class="py-5">
+                Tea and Botanical Solutions Supplier Give Optimum Satisfaction
+                To Your Taste Buds.
+              </p>
+              <button
+                class="btn bg-gradient-to-r from-first-gradient to-second-gradient text-white border-white hover:border-white"
+              >
+                Get Started
+              </button>
+            </div>
+            <div class="relative">
+              <img class="w[266]" src="images/banner.png" />
+              <div
+                class="flex items-center gap-4 bg-white p-3 drop-shadow-md rounded-md inline-block absolute top-64 left-16"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="gold"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="gold"
+                  class="size-8"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                  />
+                </svg>
+                <div>
+                  <h2 class="text-2xl font-bold text-black">5.00</h2>
+                  <p class="opacity-90 text-sm">Trust Pilot Ratings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="container mx-auto">
+      <!-- featured items -->
+      <section class="mt-24 mb-20 mx-2 lg:mx-0">
+        <!-- featured title -->
+        <div class="text-center">
+          <h2 class="text-2xl pb-2 text-black font-bold">
+            Our Featured Products
+          </h2>
+          <p class="text-sm opacity-90 w-2/3 mx-auto mb-5">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable.
+          </p>
+        </div>
+        <!-- featured card -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div>
+            <div class="card bg-slate-100 shadow-md p-4">
+              <figure>
+                <img src="images/tea-1.png" />
+              </figure>
+              <div class="card-body text-center">
+                <h2 class="text-black text-xl font-semibold">Milk Tea</h2>
+                <p>Creamer could be replaced by fresh milk</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card bg-slate-100 shadow-md p-4">
+              <figure>
+                <img src="images/tea-2.png" />
+              </figure>
+              <div class="card-body text-center">
+                <h2 class="text-black text-xl font-semibold">Black Tea</h2>
+                <p>Creamer could be replaced by fresh milk</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card bg-slate-100 shadow-md p-4">
+              <figure>
+                <img src="images/tea-3.png" />
+              </figure>
+              <div class="card-body text-center">
+                <h2 class="text-black text-xl font-semibold">Lemon Tea</h2>
+                <p>Creamer could be replaced by fresh milk</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card bg-slate-100 shadow-md p-4">
+              <figure>
+                <img src="images/tea-4.png" />
+              </figure>
+              <div class="card-body text-center">
+                <h2 class="text-black text-xl font-semibold">Green Tea</h2>
+                <p>Creamer could be replaced by fresh milk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- freshly presented tea -->
+      <section class="my-20 mx-2 lg:mx-0">
+        <div class="flex flex-col md:flex-row gap-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 flex-1">
+            <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-28"></div>
+            <div
+              class="row-span-2 bg-slate-100 flex justify-center items-center"
+            >
+              <img src="images/fresh-1.png" alt="" />
+            </div>
+            <div
+              class="row-span-2 bg-slate-100 flex justify-center items-center p-4"
+            >
+              <img src="images/fresh-2.png" alt="" />
+            </div>
+            <div class="bg-gradient-to-r from-red-500 to-orange-500 h-28"></div>
+          </div>
+          <div class="my-6 flex-1">
+            <h1 class="text-black font-bold text-3xl">
+              Great Tea, Freshly <br />
+              Presented
+            </h1>
+            <p>
+              The meaning of gong cha is chanese is to provide the best tea to
+              emperor from all possessions . It represents the highest quality
+              and self expectation. Establishing in 2006, Gong cha had been
+              deeply appreciated by its custoers because of good words of mouth
+              and unique customized service orginated from Taiwan.
+            </p>
+            <h5 class="text-black font-semibold">Unique Taste</h5>
+            <p>
+              A Unique and different style from other teapots gives a luxurious
+              and minimalist impression
+            </p>
+            <h5 class="text-black font-semibold">Premium Quality</h5>
+            <p>
+              Premium Quality that makes tea more elegant and more durable when
+              you use it.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- review section -->
+      <section
+        class="my-24 bg-gradient-to-r from-red-500 to-orange-500 flex flex-col lg:flex-row justify-center items-center gap-5 px-16 py-24 rounded-xl"
+      >
+        <div class="text-white my-4 pr-20">
+          <h2 class="font-semibold text-2xl">
+            Meet Our Super <br />
+            Clients
+          </h2>
+          <p class="my-3">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable.
+          </p>
+          <button class="btn bg-white border-none text-orange-400">
+            Show All
+          </button>
+        </div>
+        <div class="relative">
+          <!-- previous review -->
+          <div
+            class="text-black bg-white p-5 relative opacity-45 z-10 w-[400px] mb-20"
+          >
+            <img
+              class="border-white border-4 bg-white rounded-full absolute -top-8 -left-3"
+              src="images/client.png"
+              alt=""
+            />
+            <p class="mt-3">
+              We are providing the best and suitable home insurance services for
+              the people who are interested to treatment
+            </p>
+            <h2 class="font-semibold">Masuma</h2>
+            <p>web developer</p>
+            <div class="flex justify-end">
+              <img src="images/circles.png" alt="" />
+            </div>
+          </div>
+          <!-- current review -->
+          <div
+            class="text-black bg-white p-5 absolute top-40 -left-24 w-[400px] z-20"
+          >
+            <img
+              class="border-white border-4 bg-white rounded-full absolute -top-8 -left-3"
+              src="images/client.png"
+              alt=""
+            />
+            <p class="mt-3">
+              We are providing the best and suitable home insurance services for
+              the people who are interested to treatment
+            </p>
+            <h2 class="font-semibold">Masuma</h2>
+            <p>web developer</p>
+            <div class="flex justify-end">
+              <img src="images/circles.png" alt="" />
+            </div>
+          </div>
+          <!-- next review -->
+          <div
+            class="text-black bg-white p-5 relative opacity-45 z-10 w-[400px]"
+          >
+            <img
+              class="border-white border-4 bg-white rounded-full absolute -top-8 -left-3"
+              src="images/client.png"
+              alt=""
+            />
+            <p class="mt-3">
+              We are providing the best and suitable home insurance services for
+              the people who are interested to treatment
+            </p>
+            <h2 class="font-semibold">Masuma</h2>
+            <p>web developer</p>
+            <div class="flex justify-end">
+              <img src="images/circles.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
